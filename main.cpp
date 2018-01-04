@@ -94,6 +94,7 @@ void print(Node* next){
      in[i] = toupper(in[i]);
    }
  }
+//average mothod
 void average(int count, float ave, Node* next){
   if(next == NULL){
     cout << fixed << setprecision(2) << ave/count << endl;
@@ -104,6 +105,7 @@ void average(int count, float ave, Node* next){
     average(count, ave, next -> getNext());
   }
 }
+//remove method
 Node* remove(int re, Node* head){
   cout << "What is the id number of the student you want to remove?" << endl;
   cin >> re;
