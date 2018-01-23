@@ -76,18 +76,13 @@ void add(Node* current, Student* newvalue){
   }
   else{
     if(current -> getStudent() -> getid() > newvalue -> getid()){
-      cout << "1.5" << endl;
       add(current -> getNext(), newvalue);
     }
     else{
-    cout << "2" << endl;
-    current -> setNext(new Node(newvalue));
-    cout << "2.5" << endl;
-    current = current -> getNext();
-    cout << "2.7" << endl;
-    current -> setNext(current -> getNext());
-    cout << "3" << endl;
-    }
+      current -> setNext(new Node(newvalue));
+      current = current -> getNext();
+      current -> setNext(current -> getNext());
+   }
   }
 }
 //print ll
